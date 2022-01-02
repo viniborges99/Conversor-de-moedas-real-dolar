@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>conversor</title>
+</head>
+
+<body>
+    <img src="my-dolar.gif" alt="dinheiro">
+    <h1 onclick="window.location.reload()">My Dolars Reload</h1>
+    <div>
+        <input type="number" name="real" id="real" placeholder=" Valor em real">
+        <input type="number" name="dolar" id="dolar" placeholder=" Valor do dolar"  >
+
+        
+    </div>
+    <div class="aviso">
+        <p id="resultado">$ </p>
+    </div>
+    <button onclick="converter()">converter </button>
+
+</body>
+<script>
+    function converter() {
+        let real = document.getElementById("real").value
+        let dolar = document.getElementById("dolar").value
+        
+        if(real ==0 || dolar == 0){
+            window.alert('[ERRO] este valor nao pode ser convertido')
+            real = window.location.reload()
+        }else{
+            let res = real / dolar
+            resultado.innerHTML+=res.toFixed(2) + ` dolares`
+        }
+    }
+
+
+    
+
+</script>
+
+</html>
